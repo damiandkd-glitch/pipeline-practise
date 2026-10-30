@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Zupa spalona!"
+    return "Zupa gotowa!"
