@@ -21,3 +21,12 @@ jobs:
 
       - name: Uruchom testy
         run: pytest
+    build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+
+      - name: Zbuduj obraz Dockera
+        run: docker build -t pipeline-practice .
